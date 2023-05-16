@@ -40,17 +40,18 @@
                 if (!string.IsNullOrEmpty(errosDeValidação))
                 {
                     MessageBox.Show(errosDeValidação);
+                    return;
                 }
-
+                
+                
                 _peca = peca;
-
-                Close();
+                 Close();
+                
             }
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message);
             }
-
         }
 
         private void AoClicarCancelar_Click(object sender, EventArgs e)

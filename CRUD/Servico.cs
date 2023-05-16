@@ -8,9 +8,6 @@
             {
                 return "campo Nome vazio!";
             }
-
-
-
             return string.Empty;
         }
     }
