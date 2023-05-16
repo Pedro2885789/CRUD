@@ -3,11 +3,12 @@ namespace CRUD
     public partial class controleDePecas : Form
     {
         public List<Peca> listaDePecas = new();
-        public int proximoId = 0;
+        private int proximoId = 0;
 
         public controleDePecas()
         {
             InitializeComponent();
+            AtualizarLista();
         }
 
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
@@ -16,20 +17,22 @@ namespace CRUD
             cadastroDePecas.ShowDialog();
 
             var pecaPreenchida = cadastroDePecas._peca;
-            pecaPreenchida.Id = obterProximoId();
-
+            pecaPreenchida.Id = ObterProximoId();
 
             listaDePecas.Add(pecaPreenchida);
-            controleDePecas_Load();
-        }
-        private void controleDePecas_Load()
-        {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listaDePecas;
-        }
-        public int obterProximoId()
+            AtualizarLista();
+        }   
+
+        public int ObterProximoId()
         {
             return ++proximoId;
         }
+
+        private void AtualizarLista()
+        {
+            dataGridView1.DataSource = null;    
+            dataGridView1.DataSource = listaDePecas;
+        }
+
     }
 }

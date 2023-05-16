@@ -38,7 +38,7 @@
             textBox3 = new TextBox();
             dateTimePicker1 = new DateTimePicker();
             numericUpDown1 = new NumericUpDown();
-            button1 = new Button();
+            AoClicarCancelar = new Button();
             AoClicarSalvar = new Button();
             ((System.ComponentModel.ISupportInitialize)numericUpDown1).BeginInit();
             SuspendLayout();
@@ -124,14 +124,15 @@
             numericUpDown1.Size = new Size(144, 23);
             numericUpDown1.TabIndex = 9;
             // 
-            // button1
+            // AoClicarCancelar
             // 
-            button1.Location = new Point(119, 238);
-            button1.Name = "button1";
-            button1.Size = new Size(102, 39);
-            button1.TabIndex = 10;
-            button1.Text = "Cancelar";
-            button1.UseVisualStyleBackColor = true;
+            AoClicarCancelar.Location = new Point(119, 238);
+            AoClicarCancelar.Name = "AoClicarCancelar";
+            AoClicarCancelar.Size = new Size(102, 39);
+            AoClicarCancelar.TabIndex = 10;
+            AoClicarCancelar.Text = "Cancelar";
+            AoClicarCancelar.UseVisualStyleBackColor = true;
+            AoClicarCancelar.Click += AoClicarCancelar_Click;
             // 
             // AoClicarSalvar
             // 
@@ -149,7 +150,7 @@
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(342, 289);
             Controls.Add(AoClicarSalvar);
-            Controls.Add(button1);
+            Controls.Add(AoClicarCancelar);
             Controls.Add(numericUpDown1);
             Controls.Add(dateTimePicker1);
             Controls.Add(textBox3);
@@ -179,7 +180,7 @@
         private TextBox textBox3;
         private DateTimePicker dateTimePicker1;
         private NumericUpDown numericUpDown1;
-        private Button button1;
+        private Button AoClicarCancelar;
         private Button AoClicarSalvar;
     }
 }
