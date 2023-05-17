@@ -19,8 +19,7 @@
                 dateTimePicker1.Value = peca.DataDeFabricacao;  
                 numericUpDown1.Value = peca.Estoque;
             }*/
-            dateTimePicker1.MaxDate = DateTime.Now;
-        }
+         }
 
         private void AoClicarSalvar_Click(object sender, EventArgs e)
         {
@@ -32,7 +31,7 @@
                     Categoria = textBox2.Text,
                     Descricao = textBox3.Text,
                     DataDeFabricacao = dateTimePicker1.Value,
-                    Estoque = (int)numericUpDown1.Value
+                    Estoque = (int)numericUpDown1.Value,
                 };
 
                 var errosDeValidação = Servico.ValidarCampos(peca);
@@ -43,7 +42,6 @@
                     return;
                 }
                 
-                
                 _peca = peca;
                  Close();
                 
@@ -53,7 +51,6 @@
                 MessageBox.Show(ex.Message);
             }
         }
-
         private void AoClicarCancelar_Click(object sender, EventArgs e)
         {
             Close();
