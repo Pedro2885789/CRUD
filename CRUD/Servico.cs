@@ -7,7 +7,7 @@ namespace CRUD
     {
         public static string ValidarCampos(Peca peca)
         {
-            var tamanhoMinimo = 4;
+            var tamanhoMinimo = 3;
 
             if (string.IsNullOrEmpty(peca.Nome) || peca.Nome.Length < tamanhoMinimo || Regex.IsMatch(peca.Nome, @"[^a-zA-Z0-9 ]"))
             {

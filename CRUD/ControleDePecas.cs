@@ -11,6 +11,17 @@ namespace CRUD
             AtualizarLista();
         }
 
+        private void AtualizarLista()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = listaDePecas;
+        }
+
+        public int ObterProximoId()
+        {
+            return ++proximoId;
+        }
+
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
         {
             CadastroDePecas cadastroDePecas = new();
@@ -21,18 +32,6 @@ namespace CRUD
 
             listaDePecas.Add(pecaPreenchida);
             AtualizarLista();
-        }   
-
-        public int ObterProximoId()
-        {
-            return ++proximoId;
         }
-
-        private void AtualizarLista()
-        {
-            dataGridView1.DataSource = null;    
-            dataGridView1.DataSource = listaDePecas;
-        }
-
     }
 }
