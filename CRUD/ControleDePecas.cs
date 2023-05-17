@@ -1,3 +1,5 @@
+using System.Windows.Forms;
+
 namespace CRUD
 {
     public partial class controleDePecas : Form
@@ -32,6 +34,12 @@ namespace CRUD
 
             listaDePecas.Add(pecaPreenchida);
             AtualizarLista();
+        }
+
+        private void AoClicarEditar_Click(object sender, EventArgs e)
+        {
+            var linhaSelecionada = dataGridView1.SelectedRows[0].Cells[0].RowIndex;
+
         }
     }
 }

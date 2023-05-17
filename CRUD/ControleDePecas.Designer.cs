@@ -62,6 +62,7 @@
             AoClicarEditar.TabIndex = 1;
             AoClicarEditar.Text = "Editar";
             AoClicarEditar.UseVisualStyleBackColor = true;
+            AoClicarEditar.Click += AoClicarEditar_Click;
             // 
             // AoClicarRemover
             // 
