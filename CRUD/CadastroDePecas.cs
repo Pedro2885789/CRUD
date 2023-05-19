@@ -3,11 +3,16 @@
     public partial class CadastroDePecas : Form
     {
         public Peca _peca = new();
-        public CadastroDePecas()
+        public CadastroDePecas(Peca? peca)
         {
             InitializeComponent();
+            VerificaPecaExistente(peca);
+           
+        }
 
-            /*if (peca == null)
+       void VerificaPecaExistente(Peca? peca)
+        {
+            if (peca == null)
             {
                 _peca = new Peca();
             }
@@ -16,10 +21,10 @@
                 textBox1.Text = peca.Nome;
                 textBox2.Text = peca.Categoria;
                 textBox3.Text = peca.Descricao;
-                dateTimePicker1.Value = peca.DataDeFabricacao;  
+                dateTimePicker1.Value = peca.DataDeFabricacao;
                 numericUpDown1.Value = peca.Estoque;
-            }*/
-         }
+            }
+        }
 
         private void AoClicarSalvar_Click(object sender, EventArgs e)
         {
