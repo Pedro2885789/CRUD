@@ -1,35 +1,111 @@
 namespace CRUD
 {
-    public partial class controleDePecas : Form
+    public partial class ControleDePecas : Form
     {
         public List<Peca> listaDePecas = new();
-        public int proximoId = 0;
+        private int proximoId = 0;
 
-        public controleDePecas()
+        public ControleDePecas()
         {
             InitializeComponent();
+            AtualizarLista();
+        }
+
+        private void AtualizarLista()
+        {
+            dataGridView1.DataSource = null;
+            dataGridView1.DataSource = listaDePecas.ToList();
+        }
+
+        private int ObterProximoId()
+        {
+            return ++proximoId;
         }
 
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
         {
-            CadastroDePecas cadastroDePecas = new();
-            cadastroDePecas.ShowDialog();
+            try
+            {
+                CadastroDePecas cadastroDePecas = new(null);
+                cadastroDePecas.ShowDialog();
 
-            var pecaPreenchida = cadastroDePecas._peca;
-            pecaPreenchida.Id = obterProximoId();
+                var pecaPreenchida = cadastroDePecas._peca;
 
 
-            listaDePecas.Add(pecaPreenchida);
-            controleDePecas_Load();
+                if (cadastroDePecas.DialogResult == DialogResult.OK)
+                {
+                    pecaPreenchida.Id = ObterProximoId();
+                    listaDePecas.Add(pecaPreenchida);
+                }
+                AtualizarLista();
+
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        private void controleDePecas_Load()
+
+        private void AoClicarEditar_Click(object sender, EventArgs e)
         {
-            dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listaDePecas;
+            try
+            {
+                if (dataGridView1.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Selecione um item!");
+                    return;
+                }
+
+                var linhaSelecionada = (int)dataGridView1.SelectedRows[0].Cells[0].RowIndex;
+                var pecaSelecionada = (Peca)dataGridView1.Rows[linhaSelecionada].DataBoundItem;
+
+                CadastroDePecas cadastroPeca = new(pecaSelecionada);
+                cadastroPeca.ShowDialog();
+
+                var pecaAtualizada = cadastroPeca._peca;
+
+                if (cadastroPeca.DialogResult == DialogResult.OK)
+                {
+                    pecaAtualizada.Id = pecaSelecionada.Id;
+
+                    listaDePecas[linhaSelecionada] = pecaAtualizada;
+
+                    AtualizarLista();
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        public int obterProximoId()
+
+        private void AoClicarRemover_Click(object sender, EventArgs e)
         {
-            return ++proximoId;
+            try
+            {
+                if(dataGridView1.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Selecione um item!");
+                    return;
+                }
+
+                var linhaSelecionada = dataGridView1.SelectedRows[0].Cells[0].RowIndex;
+                var pecaSelecionada = (Peca)dataGridView1.Rows[linhaSelecionada].DataBoundItem;
+
+                string mensagem = "Tem certeza ?";
+                var resultado = MessageBox.Show(mensagem, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    listaDePecas.Remove(pecaSelecionada);
+                    AtualizarLista();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
         }
     }
 }
