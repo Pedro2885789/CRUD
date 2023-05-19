@@ -2,12 +2,12 @@ using System.ComponentModel;
 
 namespace CRUD
 {
-    public partial class controleDePecas : Form
+    public partial class ControleDePecas : Form
     {
         public List<Peca> listaDePecas = new();
         private int proximoId = 0;
 
-        public controleDePecas()
+        public ControleDePecas()
         {
             InitializeComponent();
             AtualizarLista();
@@ -19,7 +19,7 @@ namespace CRUD
             dataGridView1.DataSource = listaDePecas.ToList();
         }
 
-        public int ObterProximoId()
+        private int ObterProximoId()
         {
             return ++proximoId;
         }
@@ -53,20 +53,17 @@ namespace CRUD
                     MessageBox.Show("Selecione um item");
                     return;
                 }
+
                 var linhaSelecionada = (int)dataGridView1.SelectedRows[0].Cells[0].RowIndex;
                 var pecaSelecionada = (Peca)dataGridView1.Rows[linhaSelecionada].DataBoundItem;
 
-                CadastroDePecas cadastroPeca = new CadastroDePecas(pecaSelecionada);
+                CadastroDePecas cadastroPeca = new(pecaSelecionada);
                 cadastroPeca.ShowDialog();
 
                 var pecaAtualizada = cadastroPeca._peca;
+                pecaAtualizada.Id = pecaSelecionada.Id;
                 
-
-                if (cadastroPeca.DialogResult == DialogResult.OK)
-                {
-                    pecaAtualizada.Id = ObterProximoId();
-                    listaDePecas[linhaSelecionada] = pecaAtualizada;
-                }
+                listaDePecas[linhaSelecionada] = pecaAtualizada;
 
                 AtualizarLista();
             }
@@ -74,7 +71,6 @@ namespace CRUD
             {
                 MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
     }
 }

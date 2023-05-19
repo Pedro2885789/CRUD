@@ -7,7 +7,6 @@
         {
             InitializeComponent();
             VerificaPecaExistente(peca);
-           
         }
 
        void VerificaPecaExistente(Peca? peca)
@@ -46,7 +45,7 @@
                     MessageBox.Show(errosDeValidação);
                     return;
                 }
-                
+                DialogResult = DialogResult.OK;
                 _peca = peca;
                  Close();
                 
@@ -58,7 +57,14 @@
         }
         private void AoClicarCancelar_Click(object sender, EventArgs e)
         {
-            Close();
+            try
+            {
+                DialogResult = DialogResult.Cancel;
+                Close();
+            }
+            catch(Exception ex){
+                MessageBox.Show(ex.Message);
+            }    
         }
     }
 }
