@@ -45,8 +45,11 @@
                     MessageBox.Show(errosDeValidação);
                     return;
                 }
+
                 DialogResult = DialogResult.OK;
+
                 _peca = peca;
+
                  Close();
                 
             }

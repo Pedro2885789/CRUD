@@ -32,10 +32,15 @@ namespace CRUD
                 cadastroDePecas.ShowDialog();
 
                 var pecaPreenchida = cadastroDePecas._peca;
-                pecaPreenchida.Id = ObterProximoId();
+                
 
-                listaDePecas.Add(pecaPreenchida);
+                if (cadastroDePecas.DialogResult == DialogResult.OK)
+                {
+                    pecaPreenchida.Id = ObterProximoId();
+                    listaDePecas.Add(pecaPreenchida);
+                }
                 AtualizarLista();
+
             }
             catch (Exception ex)
             {
@@ -61,11 +66,15 @@ namespace CRUD
                 cadastroPeca.ShowDialog();
 
                 var pecaAtualizada = cadastroPeca._peca;
-                pecaAtualizada.Id = pecaSelecionada.Id;
-                
-                listaDePecas[linhaSelecionada] = pecaAtualizada;
 
-                AtualizarLista();
+                if (cadastroPeca.DialogResult == DialogResult.OK)
+                {
+                    pecaAtualizada.Id = pecaSelecionada.Id;
+
+                    listaDePecas[linhaSelecionada] = pecaAtualizada;
+
+                    AtualizarLista();
+                }
             }
             catch (Exception ex)
             {
