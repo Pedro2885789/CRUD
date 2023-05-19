@@ -2,9 +2,6 @@ namespace CRUD
 {
     public partial class ControleDePecas : Form
     {
-        public List<Peca> listaDePecas = new();
-        private int proximoId = 0;
-
         public ControleDePecas()
         {
             InitializeComponent();
@@ -14,18 +11,15 @@ namespace CRUD
         private void AtualizarLista()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = listaDePecas.ToList();
-        }
-
-        private int ObterProximoId()
-        {
-            return ++proximoId;
+            dataGridView1.DataSource = Singleton.Instancia()._listaDePecas.ToList();
         }
 
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
         {
             try
             {
+                var recebeLista = Singleton.Instancia();
+
                 CadastroDePecas cadastroDePecas = new(null);
                 cadastroDePecas.ShowDialog();
 
@@ -34,8 +28,8 @@ namespace CRUD
 
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
-                    pecaPreenchida.Id = ObterProximoId();
-                    listaDePecas.Add(pecaPreenchida);
+                    pecaPreenchida.Id = recebeLista.ObterProximoId();
+                    recebeLista._listaDePecas.Add(pecaPreenchida);
                 }
                 AtualizarLista();
 
@@ -50,6 +44,7 @@ namespace CRUD
         {
             try
             {
+                var recebeLista = Singleton.Instancia();
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
                     MessageBox.Show("Selecione um item!");
@@ -68,7 +63,7 @@ namespace CRUD
                 {
                     pecaAtualizada.Id = pecaSelecionada.Id;
 
-                    listaDePecas[linhaSelecionada] = pecaAtualizada;
+                    recebeLista._listaDePecas[linhaSelecionada] = pecaAtualizada;
 
                     AtualizarLista();
                 }
@@ -83,7 +78,9 @@ namespace CRUD
         {
             try
             {
-                if(dataGridView1.SelectedRows.Count != 1)
+                var recebeLista = Singleton.Instancia();
+
+                if (dataGridView1.SelectedRows.Count != 1)
                 {
                     MessageBox.Show("Selecione um item!");
                     return;
@@ -97,7 +94,7 @@ namespace CRUD
 
                 if (resultado == DialogResult.Yes)
                 {
-                    listaDePecas.Remove(pecaSelecionada);
+                    recebeLista._listaDePecas.Remove(pecaSelecionada);
                     AtualizarLista();
                 }
 
