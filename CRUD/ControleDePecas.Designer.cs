@@ -72,6 +72,7 @@
             AoClicarRemover.TabIndex = 2;
             AoClicarRemover.Text = "Remover";
             AoClicarRemover.UseVisualStyleBackColor = true;
+            AoClicarRemover.Click += AoClicarRemover_Click;
             // 
             // dataGridView1
             // 
@@ -125,7 +126,7 @@
             // 
             pecaBindingSource.DataSource = typeof(Peca);
             // 
-            // controleDePecas
+            // ControleDePecas
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
@@ -134,7 +135,7 @@
             Controls.Add(AoClicarRemover);
             Controls.Add(AoClicarEditar);
             Controls.Add(AoClicarAdicionar);
-            Name = "controleDePecas";
+            Name = "ControleDePecas";
             Text = "Controle de Peças";
             ((System.ComponentModel.ISupportInitialize)dataGridView1).EndInit();
             ((System.ComponentModel.ISupportInitialize)pecaBindingSource).EndInit();

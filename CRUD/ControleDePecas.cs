@@ -1,5 +1,3 @@
-using System.ComponentModel;
-
 namespace CRUD
 {
     public partial class ControleDePecas : Form
@@ -32,7 +30,7 @@ namespace CRUD
                 cadastroDePecas.ShowDialog();
 
                 var pecaPreenchida = cadastroDePecas._peca;
-                
+
 
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
@@ -46,7 +44,6 @@ namespace CRUD
             {
                 MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
-
         }
 
         private void AoClicarEditar_Click(object sender, EventArgs e)
@@ -55,7 +52,7 @@ namespace CRUD
             {
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
-                    MessageBox.Show("Selecione um item");
+                    MessageBox.Show("Selecione um item!");
                     return;
                 }
 
@@ -79,6 +76,35 @@ namespace CRUD
             catch (Exception ex)
             {
                 MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+        }
+
+        private void AoClicarRemover_Click(object sender, EventArgs e)
+        {
+            try
+            {
+                if(dataGridView1.SelectedRows.Count != 1)
+                {
+                    MessageBox.Show("Selecione um item!");
+                    return;
+                }
+
+                var linhaSelecionada = dataGridView1.SelectedRows[0].Cells[0].RowIndex;
+                var pecaSelecionada = (Peca)dataGridView1.Rows[linhaSelecionada].DataBoundItem;
+
+                string mensagem = "Tem certeza ?";
+                var resultado = MessageBox.Show(mensagem, "Aviso", MessageBoxButtons.YesNo, MessageBoxIcon.Question);
+
+                if (resultado == DialogResult.Yes)
+                {
+                    listaDePecas.Remove(pecaSelecionada);
+                    AtualizarLista();
+                }
+
+            }
+            catch(Exception ex)
+            {
+                MessageBox.Show(ex.Message);
             }
         }
     }
