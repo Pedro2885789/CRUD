@@ -13,9 +13,9 @@
             return ListaDePeca.FirstOrDefault(x => x.Id == id)
                 ?? throw new Exception($"Peça não encontrada com id:[{id}]");
         }
-        public void Adicionar(Peca peca)
+        public void Adicionar(Peca novaPeca)
         {
-            ListaDePeca.Add(peca);
+            ListaDePeca.Add(novaPeca);
         }
         public void Editar(int id, Peca pecaEditada)
         {

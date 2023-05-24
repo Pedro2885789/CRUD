@@ -1,24 +1,31 @@
+using CRUD.Repositorio;
+
 namespace CRUD
 {
     public partial class ControleDePecas : Form
     {
-        public ControleDePecas()
+        private readonly IRepositorio _repositorio;
+
+        public ControleDePecas(IRepositorio repositorio)
         {
+            _repositorio = repositorio;
+
             InitializeComponent();
+
             AtualizarLista();
         }
 
         private void AtualizarLista()
         {
             dataGridView1.DataSource = null;
-            dataGridView1.DataSource = Singleton.Instancia()._listaDePecas.ToList();
+            dataGridView1.DataSource = _repositorio.ObterTodos();
         }
 
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
         {
             try
             {
-                var recebeLista = Singleton.Instancia();
+                var recebeLista = _repositorio.ObterTodos();
 
                 CadastroDePecas cadastroDePecas = new(null);
                 cadastroDePecas.ShowDialog();
@@ -28,8 +35,8 @@ namespace CRUD
 
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
-                    pecaPreenchida.Id = recebeLista.ObterProximoId();
-                    recebeLista._listaDePecas.Add(pecaPreenchida);
+                    pecaPreenchida.Id = recebeLista;
+                    recebeLista.Add(pecaPreenchida);
                 }
                 AtualizarLista();
 
