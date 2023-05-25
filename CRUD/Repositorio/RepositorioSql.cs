@@ -73,20 +73,20 @@ namespace CRUD.Repositorio
             conexaoBanco.Open();
 
             SqlCommand comandoDeExecucao = new("INSERT INTO Peca (Nome, Categoria, Descricao, Estoque, DataDeFabricacao) VALUES" +
-                $"'{novaPeca.Nome}', '{novaPeca.Categoria}', '{novaPeca.Descricao}', '{novaPeca.Estoque}', '{novaPeca.DataDeFabricacao}'", conexaoBanco);
+                $"('{novaPeca.Nome}', '{novaPeca.Categoria}', '{novaPeca.Descricao}', {novaPeca.Estoque}, '{novaPeca.DataDeFabricacao}')", conexaoBanco);
 
             comandoDeExecucao.ExecuteNonQuery();
 
             conexaoBanco.Close();
         }
 
-        public void Editar(int id, Peca peca)
+        public void Editar(int id, Peca pecaAtualizada)
         {
             SqlConnection conexaoBanco = new(connectionSttring);
 
             conexaoBanco.Open();
 
-            SqlCommand comandoDeExecucao = new($"UPDATE Peca SET Categoria = '{peca.Categoria}', Nome = '{peca.Nome}', Descricao = '{peca.Descricao}', Estoque = {peca.Estoque}, DataDeFabricacao = '{peca.DataDeFabricacao}' WHERE Id ={id} ", conexaoBanco);
+            SqlCommand comandoDeExecucao = new($"UPDATE Peca SET Categoria = '{pecaAtualizada.Categoria}', Nome = '{pecaAtualizada.Nome}', Descricao = '{pecaAtualizada.Descricao}', Estoque = {pecaAtualizada.Estoque}, DataDeFabricacao = '{pecaAtualizada.DataDeFabricacao}' WHERE Id ={id} ", conexaoBanco);
 
             comandoDeExecucao.ExecuteNonQuery();
 

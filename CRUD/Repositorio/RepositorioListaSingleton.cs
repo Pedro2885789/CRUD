@@ -23,8 +23,7 @@
             var index = ListaDePeca.IndexOf(pecaAMudar);
             
             ListaDePeca[index] = index != -1 ?
-                pecaEditada : throw new Exception($"Peça não encontrada com id [{id}]");
-
+            pecaEditada : throw new Exception($"Peça não encontrada com id [{id}]");
         }
         public void Remover(int id)
         {

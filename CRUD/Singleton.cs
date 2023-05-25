@@ -16,7 +16,7 @@
             return _instancia;
         }
 
-        public int ObterProximoId()
+        public static int ObterProximoId()
         {
             return ++proximoId;
         }

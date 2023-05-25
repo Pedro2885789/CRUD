@@ -24,26 +24,23 @@ namespace CRUD
         private void AoClicarAdicionar_Click(object sender, EventArgs e)
         {
             try
-            {
-                var recebeLista = _repositorio.ObterTodos();
-
+            {               
                 CadastroDePecas cadastroDePecas = new(null);
                 cadastroDePecas.ShowDialog();
 
                 var pecaPreenchida = cadastroDePecas._peca;
 
-
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
-                    pecaPreenchida.Id = recebeLista;
-                    recebeLista.Add(pecaPreenchida);
+                    pecaPreenchida.Id = Singleton.ObterProximoId();
+                    _repositorio.Adicionar(pecaPreenchida);
                 }
                 AtualizarLista();
 
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro inesperado ao adicionar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -51,14 +48,13 @@ namespace CRUD
         {
             try
             {
-                var recebeLista = Singleton.Instancia();
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
                     MessageBox.Show("Selecione um item!");
                     return;
                 }
 
-                var linhaSelecionada = (int)dataGridView1.SelectedRows[0].Cells[0].RowIndex;
+                var linhaSelecionada = dataGridView1.SelectedRows[0].Cells[0].RowIndex;
                 var pecaSelecionada = (Peca)dataGridView1.Rows[linhaSelecionada].DataBoundItem;
 
                 CadastroDePecas cadastroPeca = new(pecaSelecionada);
@@ -70,14 +66,14 @@ namespace CRUD
                 {
                     pecaAtualizada.Id = pecaSelecionada.Id;
 
-                    recebeLista._listaDePecas[linhaSelecionada] = pecaAtualizada;
+                    _repositorio.Editar(pecaAtualizada.Id, pecaAtualizada);
 
                     AtualizarLista();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Erro inesperado", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Erro inesperado ao editar", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -85,8 +81,6 @@ namespace CRUD
         {
             try
             {
-                var recebeLista = Singleton.Instancia();
-
                 if (dataGridView1.SelectedRows.Count != 1)
                 {
                     MessageBox.Show("Selecione um item!");
@@ -101,14 +95,14 @@ namespace CRUD
 
                 if (resultado == DialogResult.Yes)
                 {
-                    recebeLista._listaDePecas.Remove(pecaSelecionada);
+                    _repositorio.Remover(pecaSelecionada.Id);
                     AtualizarLista();
                 }
 
             }
             catch(Exception ex)
             {
-                MessageBox.Show(ex.Message);
+                MessageBox.Show(ex.Message, "Erro inesperado ao remover");
             }
         }
     }
