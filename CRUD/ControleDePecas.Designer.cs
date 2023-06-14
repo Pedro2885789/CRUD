@@ -124,7 +124,6 @@
             // 
             // pecaBindingSource
             // 
-            pecaBindingSource.DataSource = typeof(Peca);
             // 
             // ControleDePecas
             // 
