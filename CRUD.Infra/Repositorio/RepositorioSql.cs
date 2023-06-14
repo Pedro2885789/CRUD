@@ -1,9 +1,10 @@
 ﻿using Microsoft.Data.SqlClient;
 using System.Configuration;
+using CRUD.Dominio;
 
-namespace CRUD.Repositorio
+namespace CRUD.Infra.Repositorio
 {
-    internal class RepositorioSql : IRepositorio
+    public class RepositorioSql : IRepositorio
     {
         private static readonly string connectionSttring = ConfigurationManager.ConnectionStrings["ConexaoBD"].ConnectionString;
         public List<Peca> ObterTodos()
@@ -52,15 +53,12 @@ namespace CRUD.Repositorio
 
             while (lerExecucaoQuer.Read())
             {
-                peca = new()
-                {
-                    Id = Convert.ToInt32(lerExecucaoQuer[0]),
-                    Nome = lerExecucaoQuer[1].ToString(),
-                    Categoria = lerExecucaoQuer[2].ToString(),
-                    Descricao = lerExecucaoQuer[3].ToString(),
-                    Estoque = Convert.ToInt32(lerExecucaoQuer[4]),
-                    DataDeFabricacao = Convert.ToDateTime(lerExecucaoQuer[5])
-                };
+                peca.Id = Convert.ToInt32(lerExecucaoQuer[0]);
+                peca.Nome = lerExecucaoQuer[1].ToString();
+                peca.Categoria = lerExecucaoQuer[2].ToString();
+                peca.Descricao = lerExecucaoQuer[3].ToString();
+                peca.Estoque = Convert.ToInt32(lerExecucaoQuer[4]);
+                peca.DataDeFabricacao = Convert.ToDateTime(lerExecucaoQuer[5]);
             }
             conexaoBanco.Close();
 
@@ -68,7 +66,7 @@ namespace CRUD.Repositorio
         }
         public void Adicionar(Peca novaPeca)
         {
-            SqlConnection conexaoBanco = new( connectionSttring);
+            SqlConnection conexaoBanco = new(connectionSttring);
 
             conexaoBanco.Open();
 

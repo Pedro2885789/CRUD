@@ -1,4 +1,4 @@
-﻿namespace CRUD
+﻿namespace CRUD.Dominio
 {
     public class Peca
     {

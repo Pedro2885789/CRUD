@@ -1428,6 +1428,37 @@
             "rid": "win"
           }
         }
+      },
+      "CRUD.Dominio/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "7.0.1",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD.Dominio.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Dominio.dll": {}
+        }
+      },
+      "CRUD.Infra/1.0.0": {
+        "type": "project",
+        "framework": ".NETCoreApp,Version=v7.0",
+        "dependencies": {
+          "CRUD.Dominio": "1.0.0",
+          "FluentMigrator": "3.3.2",
+          "FluentMigrator.Runner": "3.3.2",
+          "Microsoft.Extensions.Hosting": "7.0.1",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "compile": {
+          "bin/placeholder/CRUD.Infra.dll": {}
+        },
+        "runtime": {
+          "bin/placeholder/CRUD.Infra.dll": {}
+        }
       }
     }
   },
@@ -3596,10 +3627,22 @@
         "system.windows.extensions.nuspec",
         "useSharedDesignerContext.txt"
       ]
+    },
+    "CRUD.Dominio/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Dominio/CRUD.Dominio.csproj",
+      "msbuildProject": "../CRUD.Dominio/CRUD.Dominio.csproj"
+    },
+    "CRUD.Infra/1.0.0": {
+      "type": "project",
+      "path": "../CRUD.Infra/CRUD.Infra.csproj",
+      "msbuildProject": "../CRUD.Infra/CRUD.Infra.csproj"
     }
   },
   "projectFileDependencyGroups": {
     "net7.0-windows7.0": [
+      "CRUD.Dominio >= 1.0.0",
+      "CRUD.Infra >= 1.0.0",
       "FluentMigrator >= 3.3.2",
       "FluentMigrator.Runner >= 3.3.2",
       "FluentMigrator.Runner.SqlServer >= 3.3.2",
@@ -3638,7 +3681,14 @@
       "frameworks": {
         "net7.0-windows7.0": {
           "targetAlias": "net7.0-windows",
-          "projectReferences": {}
+          "projectReferences": {
+            "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.Dominio\\CRUD.Dominio.csproj": {
+              "projectPath": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.Dominio\\CRUD.Dominio.csproj"
+            },
+            "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.Infra\\CRUD.Infra.csproj": {
+              "projectPath": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.Infra\\CRUD.Infra.csproj"
+            }
+          }
         }
       },
       "warningProperties": {

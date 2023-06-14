@@ -1,8 +1,8 @@
 ﻿using FluentMigrator;
 
-namespace CRUD
+namespace CRUD.Infra
 {
-    [Migration(20220521181700)]
+    [Migration(20220614191200)]
     public class AdicionaTabelaPeca : Migration
     {
         public override void Up()

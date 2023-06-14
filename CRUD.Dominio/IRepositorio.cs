@@ -1,4 +1,4 @@
-﻿namespace CRUD.Repositorio
+﻿namespace CRUD.Dominio
 {
     public interface IRepositorio
     {

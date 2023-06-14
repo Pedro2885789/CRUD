@@ -8,6 +8,8 @@
     ".NETCoreApp,Version=v7.0": {
       "CRUD/1.0.0": {
         "dependencies": {
+          "CRUD.Dominio": "1.0.0",
+          "CRUD.Infra": "1.0.0",
           "FluentMigrator": "3.3.2",
           "FluentMigrator.Runner": "3.3.2",
           "FluentMigrator.Runner.SqlServer": "3.3.2",
@@ -804,6 +806,27 @@
         "dependencies": {
           "System.Drawing.Common": "7.0.0"
         }
+      },
+      "CRUD.Dominio/1.0.0": {
+        "dependencies": {
+          "Microsoft.Extensions.Hosting": "7.0.1",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "runtime": {
+          "CRUD.Dominio.dll": {}
+        }
+      },
+      "CRUD.Infra/1.0.0": {
+        "dependencies": {
+          "CRUD.Dominio": "1.0.0",
+          "FluentMigrator": "3.3.2",
+          "FluentMigrator.Runner": "3.3.2",
+          "Microsoft.Extensions.Hosting": "7.0.1",
+          "System.Configuration.ConfigurationManager": "7.0.0"
+        },
+        "runtime": {
+          "CRUD.Infra.dll": {}
+        }
       }
     }
   },
@@ -1323,6 +1346,16 @@
       "sha512": "sha512-bR4qdCmssMMbo9Fatci49An5B1UaVJZHKNq70PRgzoLYIlitb8Tj7ns/Xt5Pz1CkERiTjcVBDU2y1AVrPBYkaw==",
       "path": "system.windows.extensions/7.0.0",
       "hashPath": "system.windows.extensions.7.0.0.nupkg.sha512"
+    },
+    "CRUD.Dominio/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
+    },
+    "CRUD.Infra/1.0.0": {
+      "type": "project",
+      "serviceable": false,
+      "sha512": ""
     }
   }
 }

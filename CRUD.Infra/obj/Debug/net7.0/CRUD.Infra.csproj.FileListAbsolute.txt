@@ -1,0 +1,15 @@
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\bin\Debug\net7.0\CRUD.Infra.deps.json
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\bin\Debug\net7.0\CRUD.Infra.dll
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\bin\Debug\net7.0\CRUD.Infra.pdb
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\bin\Debug\net7.0\CRUD.Dominio.dll
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\bin\Debug\net7.0\CRUD.Dominio.pdb
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.csproj.AssemblyReference.cache
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.AssemblyInfoInputs.cache
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.AssemblyInfo.cs
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.csproj.CoreCompileInputs.cache
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.csproj.CopyComplete
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.dll
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\refint\CRUD.Infra.dll
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\CRUD.Infra.pdb
+C:\Users\Pedro\Desktop\CRUD\CRUD.Infra\obj\Debug\net7.0\ref\CRUD.Infra.dll

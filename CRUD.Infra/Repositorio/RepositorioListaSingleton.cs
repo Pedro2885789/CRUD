@@ -1,6 +1,8 @@
-﻿namespace CRUD.Repositorio
+﻿using CRUD.Dominio;
+
+namespace CRUD.Dominio.Repositorio
 {
-    internal class RepositorioListaSingleton : IRepositorio
+    public class RepositorioListaSingleton : IRepositorio
     {
         protected List<Peca> ListaDePeca = Singleton.Instancia()._listaDePecas;
 

@@ -1,6 +1,6 @@
-﻿namespace CRUD
+﻿namespace CRUD.Dominio
 {
-    internal class Singleton
+    public class Singleton
     {
         private static Singleton? _instancia;
         private static int proximoId = 0;

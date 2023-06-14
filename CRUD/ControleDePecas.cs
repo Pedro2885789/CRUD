@@ -1,4 +1,4 @@
-using CRUD.Repositorio;
+using CRUD.Dominio;
 
 namespace CRUD
 {
