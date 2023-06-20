@@ -12,7 +12,8 @@
           "FluentMigrator": "3.3.2",
           "FluentMigrator.Runner": "3.3.2",
           "Microsoft.Extensions.Hosting": "7.0.1",
-          "System.Configuration.ConfigurationManager": "7.0.0"
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "linq2db": "5.2.2"
         },
         "runtime": {
           "CRUD.Infra.dll": {}
@@ -261,6 +262,14 @@
           "lib/netstandard2.0/System.Data.SqlServerCe.dll": {
             "assemblyVersion": "4.0.0.0",
             "fileVersion": "4.0.8876.1"
+          }
+        }
+      },
+      "linq2db/5.2.2": {
+        "runtime": {
+          "lib/net6.0/linq2db.dll": {
+            "assemblyVersion": "5.2.2.0",
+            "fileVersion": "5.2.2.0"
           }
         }
       },
@@ -899,7 +908,8 @@
       "CRUD.Dominio/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Hosting": "7.0.1",
-          "System.Configuration.ConfigurationManager": "7.0.0"
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "linq2db": "5.2.2"
         },
         "runtime": {
           "CRUD.Dominio.dll": {}
@@ -1045,6 +1055,13 @@
       "sha512": "sha512-IOYYVsgsTPdRUx6ZZ74Xuu6ZCTJuj268CG4hYciMsznuAGSZvADHFQrHC0EdXn+kNOdZfYeKyJ+kuR+igm6utg==",
       "path": "fluentmigrator.runner.sqlserverce/3.3.2",
       "hashPath": "fluentmigrator.runner.sqlserverce.3.3.2.nupkg.sha512"
+    },
+    "linq2db/5.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RPELtCwa5RxL1AuP8LCLsEBDpFMizHgG9J3lo1nQWrcQDvFQnKA2+ME06W3Ke/gg2kKrTd/l8Rhqu6lgPTyNqA==",
+      "path": "linq2db/5.2.2",
+      "hashPath": "linq2db.5.2.2.nupkg.sha512"
     },
     "Microsoft.CSharp/4.5.0": {
       "type": "package",

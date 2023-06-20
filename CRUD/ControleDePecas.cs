@@ -28,11 +28,11 @@ namespace CRUD
                 CadastroDePecas cadastroDePecas = new(null);
                 cadastroDePecas.ShowDialog();
 
-                var pecaPreenchida = cadastroDePecas._peca;
+                var pecaPreenchida = cadastroDePecas.peca;
 
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
-                    pecaPreenchida.Id = Singleton.ObterProximoId();
+                    //pecaPreenchida.Id = Singleton.ObterProximoId(); Apenas quando se usa Singleton
                     _repositorio.Adicionar(pecaPreenchida);
                 }
                 AtualizarLista();
@@ -60,11 +60,11 @@ namespace CRUD
                 CadastroDePecas cadastroPeca = new(pecaSelecionada);
                 cadastroPeca.ShowDialog();
 
-                var pecaAtualizada = cadastroPeca._peca;
+                var pecaAtualizada = cadastroPeca.peca;
+                pecaAtualizada.Id = pecaSelecionada.Id;
 
                 if (cadastroPeca.DialogResult == DialogResult.OK)
                 {
-                    pecaAtualizada.Id = pecaSelecionada.Id;
 
                     _repositorio.Editar(pecaAtualizada.Id, pecaAtualizada);
 

@@ -9,10 +9,19 @@
       "CRUD.Dominio/1.0.0": {
         "dependencies": {
           "Microsoft.Extensions.Hosting": "7.0.1",
-          "System.Configuration.ConfigurationManager": "7.0.0"
+          "System.Configuration.ConfigurationManager": "7.0.0",
+          "linq2db": "5.2.2"
         },
         "runtime": {
           "CRUD.Dominio.dll": {}
+        }
+      },
+      "linq2db/5.2.2": {
+        "runtime": {
+          "lib/net6.0/linq2db.dll": {
+            "assemblyVersion": "5.2.2.0",
+            "fileVersion": "5.2.2.0"
+          }
         }
       },
       "Microsoft.Extensions.Configuration/7.0.0": {
@@ -478,6 +487,13 @@
       "type": "project",
       "serviceable": false,
       "sha512": ""
+    },
+    "linq2db/5.2.2": {
+      "type": "package",
+      "serviceable": true,
+      "sha512": "sha512-RPELtCwa5RxL1AuP8LCLsEBDpFMizHgG9J3lo1nQWrcQDvFQnKA2+ME06W3Ke/gg2kKrTd/l8Rhqu6lgPTyNqA==",
+      "path": "linq2db/5.2.2",
+      "hashPath": "linq2db.5.2.2.nupkg.sha512"
     },
     "Microsoft.Extensions.Configuration/7.0.0": {
       "type": "package",
