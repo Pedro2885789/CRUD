@@ -5,6 +5,7 @@ using Microsoft.Extensions.Hosting;
 using CRUD.Infra;
 using CRUD.Dominio;
 using CRUD.Infra.Repositorio;
+using CRUD.Dominio.Repositorio;
 
 namespace CRUD
 {
@@ -36,7 +37,7 @@ namespace CRUD
 
             return Host.CreateDefaultBuilder()
                 .ConfigureServices((context, services) => {
-                    services.AddScoped<IRepositorio, RepositorioSql>();
+                    services.AddScoped<IRepositorio, RepositorioListaSingleton>();
                     services.AddFluentMigratorCore()
                         .ConfigureRunner(rb => rb
                                 .AddSqlServer()

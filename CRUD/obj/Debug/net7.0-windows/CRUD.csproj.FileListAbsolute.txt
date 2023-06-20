@@ -84,3 +84,4 @@ C:\Users\Pedro\Desktop\CRUD\CRUD\bin\Debug\net7.0-windows\CRUD.Dominio.dll
 C:\Users\Pedro\Desktop\CRUD\CRUD\bin\Debug\net7.0-windows\CRUD.Infra.dll
 C:\Users\Pedro\Desktop\CRUD\CRUD\bin\Debug\net7.0-windows\CRUD.Dominio.pdb
 C:\Users\Pedro\Desktop\CRUD\CRUD\bin\Debug\net7.0-windows\CRUD.Infra.pdb
+C:\Users\Pedro\Desktop\CRUD\CRUD\bin\Debug\net7.0-windows\linq2db.dll
