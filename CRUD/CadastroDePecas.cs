@@ -4,33 +4,38 @@ namespace CRUD
 {
     public partial class CadastroDePecas : Form
     {
-        public Peca _peca = new();
+        public Peca peca = new();
+
         public CadastroDePecas(Peca? peca)
         {
             InitializeComponent();
-            VerificaPecaExistente(peca);
+
+            this.peca = peca == null
+                ? new Peca()
+                : VerificaPecaExistente(peca);
         }
 
-       void VerificaPecaExistente(Peca? peca)
+        private Peca VerificaPecaExistente(Peca peca)
         {
-            if (peca == null)
-            {
-                _peca = new Peca();
-            }
-            else
-            {
-                textBox1.Text = peca.Nome;
-                textBox2.Text = peca.Categoria;
-                textBox3.Text = peca.Descricao;
-                dateTimePicker1.Value = peca.DataDeFabricacao;
-                numericUpDown1.Value = peca.Estoque;
-            }
+            Text = "Editar Peça";
+            textBox1.Text = peca.Nome;
+            textBox2.Text = peca.Categoria;
+            textBox3.Text = peca.Descricao;
+            dateTimePicker1.Value = peca.DataDeFabricacao;
+            numericUpDown1.Text = peca.Estoque.ToString();
+
+            return peca;
         }
 
         private void AoClicarSalvar_Click(object sender, EventArgs e)
         {
+            const string valorPadraoEstoque = "0";
+
             try
             {
+                if (string.IsNullOrEmpty(numericUpDown1.Text))
+                    numericUpDown1.Text = valorPadraoEstoque;
+
                 var peca = new Peca()
                 {
                     Nome = textBox1.Text,
@@ -48,12 +53,12 @@ namespace CRUD
                     return;
                 }
 
+                this.peca = peca;
+
                 DialogResult = DialogResult.OK;
 
-                _peca = peca;
+                Close();
 
-                 Close();
-                
             }
             catch (Exception ex)
             {
@@ -67,9 +72,10 @@ namespace CRUD
                 DialogResult = DialogResult.Cancel;
                 Close();
             }
-            catch(Exception ex){
+            catch (Exception ex)
+            {
                 MessageBox.Show(ex.Message);
-            }    
+            }
         }
     }
 }
