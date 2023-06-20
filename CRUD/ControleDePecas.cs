@@ -32,7 +32,7 @@ namespace CRUD
 
                 if (cadastroDePecas.DialogResult == DialogResult.OK)
                 {
-                    pecaPreenchida.Id = Singleton.ObterProximoId();
+                    //pecaPreenchida.Id = Singleton.ObterProximoId(); Apenas quando se usa Singleton
                     _repositorio.Adicionar(pecaPreenchida);
                 }
                 AtualizarLista();
