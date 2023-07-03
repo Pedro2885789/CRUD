@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "is7OUjUkKn+h0n06AyEXhwnT/wGARKBmYEP8Kbb8Xqk=",
+  "Hash": "GLca7xYPzQnIG6M0akRldcmZWRqoLwEzqQfEHfs0q0s=",
   "Source": "CRUD.web",
   "BasePath": "_content/CRUD.web",
   "Mode": "Default",
@@ -32,6 +32,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\Component.js"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\controller\\App.controller.js",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "controller/App.controller.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\controller\\App.controller.js"
     },
     {
       "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",

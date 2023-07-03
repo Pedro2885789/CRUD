@@ -5,6 +5,10 @@
       "PackagePath": "staticwebassets\\Component.js"
     },
     {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\controller\\App.controller.js",
+      "PackagePath": "staticwebassets\\controller\\App.controller.js"
+    },
+    {
       "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
