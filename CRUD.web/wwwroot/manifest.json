@@ -41,7 +41,7 @@
             "i18n": {
                 "type": "sap.ui.model.resource.ResourceModel",
                 "settings": {
-                    "bundleName": "PedroAutoPecas.i18n.i18n",
+                    "bundleName": "AutoPecas.i18n.i18n",
                     "supportedLocales": [
                         ""
                     ],
@@ -49,19 +49,12 @@
                 }
             }
         },
-        "resources": {
-            "css": [
-                {
-                    "uri": "css/style.css"
-                }
-            ]
-        },
         "routing": {
             "config": {
                 "routerClass": "sap.m.routing.Router",
                 "type": "View",
                 "viewType": "XML",
-                "path": "PedroAutoPecas.view",
+                "path": "AutoPecas.view",
                 "controlId": "app",
                 "controlAggregation": "pages",
                 "transition": "slide",

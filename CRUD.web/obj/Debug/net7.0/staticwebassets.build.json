@@ -1,0 +1,88 @@
+{
+  "Version": 1,
+  "Hash": "is7OUjUkKn+h0n06AyEXhwnT/wGARKBmYEP8Kbb8Xqk=",
+  "Source": "CRUD.web",
+  "BasePath": "_content/CRUD.web",
+  "Mode": "Default",
+  "ManifestType": "Build",
+  "ReferencedProjectsConfiguration": [],
+  "DiscoveryPatterns": [
+    {
+      "Name": "CRUD.web\\wwwroot",
+      "Source": "CRUD.web",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "Pattern": "**"
+    }
+  ],
+  "Assets": [
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\Component.js",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "Component.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\Component.js"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "index.html",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\index.html"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\manifest.json",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "manifest.json",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\manifest.json"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\view\\App.view.xml",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "view/App.view.xml",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\view\\App.view.xml"
+    }
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "Files": [
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\Component.js",
+      "PackagePath": "staticwebassets\\Component.js"
+    },
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",
+      "PackagePath": "staticwebassets\\index.html"
+    },
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\manifest.json",
+      "PackagePath": "staticwebassets\\manifest.json"
+    },
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\view\\App.view.xml",
+      "PackagePath": "staticwebassets\\view\\App.view.xml"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CRUD.web.Microsoft.AspNetCore.StaticWebAssets.props",
+      "PackagePath": "build\\Microsoft.AspNetCore.StaticWebAssets.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.build.CRUD.web.props",
+      "PackagePath": "build\\CRUD.web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildMultiTargeting.CRUD.web.props",
+      "PackagePath": "buildMultiTargeting\\CRUD.web.props"
+    },
+    {
+      "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.buildTransitive.CRUD.web.props",
+      "PackagePath": "buildTransitive\\CRUD.web.props"
+    }
+  ],
+  "ElementsToRemove": []
+}
