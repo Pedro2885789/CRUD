@@ -18,35 +18,72 @@ namespace CRUD.Infra.Repositorio
 
         public List<Peca> ObterTodos()
         {
-            var conexao = ConexaoLinq2Db();
-            return conexao.GetTable<Peca>().ToList();
+            using var conexao = ConexaoLinq2Db();
+            try
+            {
+                return conexao.GetTable<Peca>().ToList();
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("MensagensDeTela.ERRO_AO_OBTER_DADOS", ex);
+            }
         }
 
         public Peca ObterPorId(int id)
         {
-            var conexao = ConexaoLinq2Db();
-
-            var listaPecas = ObterTodos();
-            return listaPecas.FirstOrDefault(x => x.Id == id)
-                ?? throw new Exception($"Peça não encontrada com id [{id}]");
+            using var conexao = ConexaoLinq2Db();
+            try
+            {
+                return conexao.GetTable<Peca>()
+                    .FirstOrDefault(x => x.Id == id)
+                        ?? throw new Exception($"Erro ao obter a peça com o Id: [{id}]");
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("MensagensDeTela.ERRO_AO_OBTER_DADOS_POR_ID", ex);
+            }
         }
 
         public void Adicionar(Peca novaPeca)
         {
-            var conexcao = ConexaoLinq2Db();
-            conexcao.Insert(novaPeca);
+            using var conexao = ConexaoLinq2Db();
+            try
+            {
+                novaPeca.Id = conexao.InsertWithInt32Identity(novaPeca);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("MensagensDeTela.ERRO_AO_ADICIONAR_DADOS", ex);
+            }
         }
 
         public void Editar(int id, Peca pecaAtualizada)
         {
-            var conexcao = ConexaoLinq2Db();
-            conexcao.Update(pecaAtualizada);
+            using var conexao = ConexaoLinq2Db();
+            try
+            {
+                conexao.Update(pecaAtualizada);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("MensagensDeTela.ERRO_AO_EDITAR_DADOS", ex);
+            }
         }
 
         public void Remover(int id)
         {
-            var conexao = ConexaoLinq2Db();
-            conexao.Delete(ObterPorId(id));
+            using var conexao = ConexaoLinq2Db();
+            try
+            {
+                var pecaARemover = ObterPorId(id)
+                    ?? throw new Exception($"Peca não encontrada com id: [{id}]");
+
+                conexao.Delete(pecaARemover);
+            }
+            catch (Exception ex)
+            {
+                throw new Exception("MensagensDeTela.ERRO_AO_REMOVER_DADOS", ex);
+            }
         }
     }
 }
