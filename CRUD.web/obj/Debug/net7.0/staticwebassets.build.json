@@ -1,6 +1,6 @@
 {
   "Version": 1,
-  "Hash": "GLca7xYPzQnIG6M0akRldcmZWRqoLwEzqQfEHfs0q0s=",
+  "Hash": "DI9MeafUMro7McOYoK3WxlDILs8Xpy2+7XbGP5L6ZeE=",
   "Source": "CRUD.web",
   "BasePath": "_content/CRUD.web",
   "Mode": "Default",
@@ -49,6 +49,40 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\controller\\App.controller.js"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\controller\\ListaDePecas.controller.js",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "controller/ListaDePecas.controller.js",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\controller\\ListaDePecas.controller.js"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\i18n\\i18n.properties",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "i18n/i18n.properties",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\i18n\\i18n.properties"
     },
     {
       "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",
@@ -100,6 +134,23 @@
       "CopyToOutputDirectory": "Never",
       "CopyToPublishDirectory": "PreserveNewest",
       "OriginalItemSpec": "wwwroot\\view\\App.view.xml"
+    },
+    {
+      "Identity": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\view\\ListaDePecas.view.xml",
+      "SourceId": "CRUD.web",
+      "SourceType": "Discovered",
+      "ContentRoot": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\",
+      "BasePath": "_content/CRUD.web",
+      "RelativePath": "view/ListaDePecas.view.xml",
+      "AssetKind": "All",
+      "AssetMode": "All",
+      "AssetRole": "Primary",
+      "RelatedAsset": "",
+      "AssetTraitName": "",
+      "AssetTraitValue": "",
+      "CopyToOutputDirectory": "Never",
+      "CopyToPublishDirectory": "PreserveNewest",
+      "OriginalItemSpec": "wwwroot\\view\\ListaDePecas.view.xml"
     }
   ]
 }

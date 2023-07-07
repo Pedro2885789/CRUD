@@ -63,14 +63,23 @@
             "routes": [
                 {
                     "pattern": "",
-                    "name": "",
-                    "target": ""
+                    "name": "listaDePecas",
+                    "target": "listaDePecas"
+                },
+                {
+                    "pattern": "detalhes/{id}",
+                    "name": "detalhes",
+                    "target": "detalhes"
                 }
             ],
             "targets": {
-                "": {
-                    "id": "",
-                    "name": ""
+                "listaDePecas": {
+                    "id": "listaDePecas",
+                    "name": "ListaDePecas"
+                },
+                "detalhes": {
+                    "id": "detalhes",
+                    "name": "Detalhes"
                 }
             }
         }

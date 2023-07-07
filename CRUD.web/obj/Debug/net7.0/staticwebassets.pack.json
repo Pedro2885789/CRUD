@@ -9,6 +9,14 @@
       "PackagePath": "staticwebassets\\controller\\App.controller.js"
     },
     {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\controller\\ListaDePecas.controller.js",
+      "PackagePath": "staticwebassets\\controller\\ListaDePecas.controller.js"
+    },
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\i18n\\i18n.properties",
+      "PackagePath": "staticwebassets\\i18n\\i18n.properties"
+    },
+    {
       "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\index.html",
       "PackagePath": "staticwebassets\\index.html"
     },
@@ -19,6 +27,10 @@
     {
       "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\view\\App.view.xml",
       "PackagePath": "staticwebassets\\view\\App.view.xml"
+    },
+    {
+      "Id": "C:\\Users\\Pedro\\Desktop\\CRUD\\CRUD.web\\wwwroot\\view\\ListaDePecas.view.xml",
+      "PackagePath": "staticwebassets\\view\\ListaDePecas.view.xml"
     },
     {
       "Id": "obj\\Debug\\net7.0\\staticwebassets\\msbuild.CRUD.web.Microsoft.AspNetCore.StaticWebAssets.props",
